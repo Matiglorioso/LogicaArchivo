@@ -1,0 +1,13 @@
+﻿Listado de clientes
+
+Código;Nombre;Deuda
+20;José;500
+15;Ana;150
+30;María;300
+40;Josefina;400
+75;Federico;750
+
+
+Cantidad de clientes:;;5
+Total de deuda:;;2100
+Promedio de Deuda:;;420
