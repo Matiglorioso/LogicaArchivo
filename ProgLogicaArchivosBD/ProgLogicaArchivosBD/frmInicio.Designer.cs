@@ -39,6 +39,12 @@ namespace ProgLogicaArchivosBD
             this.listarDatosDeUnArchivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarDatosEnUnArchivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.baseDatosADOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.agregarNuevoClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarUnClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
+            this.listadoDeTodosLosClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listadoDeClientesDeudoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listadoDeClientesDeUnaCiudadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -95,28 +101,72 @@ namespace ProgLogicaArchivosBD
             // grabarDatosEnUnArchivoToolStripMenuItem
             // 
             this.grabarDatosEnUnArchivoToolStripMenuItem.Name = "grabarDatosEnUnArchivoToolStripMenuItem";
-            this.grabarDatosEnUnArchivoToolStripMenuItem.Size = new System.Drawing.Size(234, 22);
+            this.grabarDatosEnUnArchivoToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
             this.grabarDatosEnUnArchivoToolStripMenuItem.Text = "Grabar datos en un archivo...";
             this.grabarDatosEnUnArchivoToolStripMenuItem.Click += new System.EventHandler(this.grabarDatosEnUnArchivoToolStripMenuItem_Click);
             // 
             // listarDatosDeUnArchivoToolStripMenuItem
             // 
             this.listarDatosDeUnArchivoToolStripMenuItem.Name = "listarDatosDeUnArchivoToolStripMenuItem";
-            this.listarDatosDeUnArchivoToolStripMenuItem.Size = new System.Drawing.Size(234, 22);
+            this.listarDatosDeUnArchivoToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
             this.listarDatosDeUnArchivoToolStripMenuItem.Text = "Listar datos de un archivo...";
             this.listarDatosDeUnArchivoToolStripMenuItem.Click += new System.EventHandler(this.listarDatosDeUnArchivoToolStripMenuItem_Click);
             // 
             // buscarDatosEnUnArchivoToolStripMenuItem
             // 
             this.buscarDatosEnUnArchivoToolStripMenuItem.Name = "buscarDatosEnUnArchivoToolStripMenuItem";
-            this.buscarDatosEnUnArchivoToolStripMenuItem.Size = new System.Drawing.Size(234, 22);
+            this.buscarDatosEnUnArchivoToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
             this.buscarDatosEnUnArchivoToolStripMenuItem.Text = "Buscar datos en un archivo...";
             // 
             // baseDatosADOToolStripMenuItem
             // 
+            this.baseDatosADOToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.agregarNuevoClienteToolStripMenuItem,
+            this.consultarUnClienteToolStripMenuItem,
+            this.toolStripMenuItem2,
+            this.listadoDeTodosLosClientesToolStripMenuItem,
+            this.listadoDeClientesDeudoresToolStripMenuItem,
+            this.listadoDeClientesDeUnaCiudadToolStripMenuItem});
             this.baseDatosADOToolStripMenuItem.Name = "baseDatosADOToolStripMenuItem";
             this.baseDatosADOToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
             this.baseDatosADOToolStripMenuItem.Text = "Base Datos";
+            // 
+            // agregarNuevoClienteToolStripMenuItem
+            // 
+            this.agregarNuevoClienteToolStripMenuItem.Name = "agregarNuevoClienteToolStripMenuItem";
+            this.agregarNuevoClienteToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
+            this.agregarNuevoClienteToolStripMenuItem.Text = "Agregar nuevo cliente...";
+            // 
+            // consultarUnClienteToolStripMenuItem
+            // 
+            this.consultarUnClienteToolStripMenuItem.Name = "consultarUnClienteToolStripMenuItem";
+            this.consultarUnClienteToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
+            this.consultarUnClienteToolStripMenuItem.Text = "Consultar un cliente...";
+            this.consultarUnClienteToolStripMenuItem.Click += new System.EventHandler(this.consultarUnClienteToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(255, 6);
+            // 
+            // listadoDeTodosLosClientesToolStripMenuItem
+            // 
+            this.listadoDeTodosLosClientesToolStripMenuItem.Name = "listadoDeTodosLosClientesToolStripMenuItem";
+            this.listadoDeTodosLosClientesToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
+            this.listadoDeTodosLosClientesToolStripMenuItem.Text = "Listado de todos los clientes...";
+            this.listadoDeTodosLosClientesToolStripMenuItem.Click += new System.EventHandler(this.listadoDeTodosLosClientesToolStripMenuItem_Click);
+            // 
+            // listadoDeClientesDeudoresToolStripMenuItem
+            // 
+            this.listadoDeClientesDeudoresToolStripMenuItem.Name = "listadoDeClientesDeudoresToolStripMenuItem";
+            this.listadoDeClientesDeudoresToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
+            this.listadoDeClientesDeudoresToolStripMenuItem.Text = "Listado de clientes deudores...";
+            // 
+            // listadoDeClientesDeUnaCiudadToolStripMenuItem
+            // 
+            this.listadoDeClientesDeUnaCiudadToolStripMenuItem.Name = "listadoDeClientesDeUnaCiudadToolStripMenuItem";
+            this.listadoDeClientesDeUnaCiudadToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
+            this.listadoDeClientesDeUnaCiudadToolStripMenuItem.Text = "Listado de clientes de una ciudad...";
             // 
             // frmInicio
             // 
@@ -148,6 +198,12 @@ namespace ProgLogicaArchivosBD
         private System.Windows.Forms.ToolStripMenuItem listarDatosDeUnArchivoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem buscarDatosEnUnArchivoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem baseDatosADOToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem agregarNuevoClienteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultarUnClienteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem listadoDeTodosLosClientesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listadoDeClientesDeudoresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listadoDeClientesDeUnaCiudadToolStripMenuItem;
     }
 }
 

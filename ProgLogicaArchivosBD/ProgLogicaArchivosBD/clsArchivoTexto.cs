@@ -12,7 +12,7 @@ namespace ProgLogicaArchivosBD
 {
     class clsArchivoTexto
     {
-        private String NombreArchivo = "Clientes.csv"; // comand separated value (valor separados por coma)
+        private String NombreArchivo = "Clientes.csv"; // comma separated values (valores separados por coma)
         private Decimal Deuda = 0;
 
         public Decimal TotalDeuda
@@ -45,7 +45,7 @@ namespace ProgLogicaArchivosBD
             DatoLeido = archivo.ReadLine(); //Leer una fila
             while (DatoLeido != null)
             {
-                Vector = DatoLeido.Split(';'); // le asigno lo que tiene la variable DatoLeido (split = partir)
+                Vector = DatoLeido.Split(';'); // le asigno lo que tiene la variable DatoLeido (split = partir, corta la cadena donde encuentra ;)
                 Grilla.Rows.Add(Vector[0], Vector[1], Vector[2]);
                 Deuda = Deuda + Convert.ToDecimal(Vector[2]); // acumula el valor de la deuda que esta en la posicion 2
                 DatoLeido = archivo.ReadLine(); //volver a leer una fila (antes del cierre)

@@ -33,5 +33,16 @@ namespace ProgLogicaArchivosBD
             frmListarDatosArchivo v = new frmListarDatosArchivo();
             v.ShowDialog();
         }
+
+        private void consultarUnClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listadoDeTodosLosClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListadoClientes objVentana = new frmListadoClientes();
+                objVentana.ShowDialog();
+        }
     }
 }
