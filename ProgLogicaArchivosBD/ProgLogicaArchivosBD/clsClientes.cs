@@ -57,8 +57,8 @@ namespace ProgLogicaArchivosBD
         {
             try
             {
-                conexion.ConnectionString = CadenaConexion;
-                conexion.Open();
+                    conexion.ConnectionString = CadenaConexion;
+                    conexion.Open();
 
                 comando.Connection = conexion;
                 comando.CommandType = CommandType.TableDirect;
@@ -85,6 +85,42 @@ namespace ProgLogicaArchivosBD
             }
 
 
+        }
+        public void Exportar()
+        {
+            try
+            {
+                conexion.ConnectionString = CadenaConexion;
+                conexion.Open();
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.TableDirect;
+                comando.CommandText = Tabla;
+                adaptador = new OleDbDataAdapter(comando);
+                DataSet DS = new DataSet();
+                adaptador.Fill(DS, Tabla);
+                StreamWriter Archivo = new StreamWriter("Datos.csv", false, Encoding.UTF8);
+                Archivo.WriteLine("Listado de Clientes");
+                Archivo.WriteLine("");
+                Archivo.WriteLine("Nombre;Deuda;Limite");
+                if (DS.Tables[Tabla].Rows.Count > 0) //si el contador de filas de la tabla del DataSet es mayor a 0
+                {
+                    foreach (DataRow Reg in DS.Tables[Tabla].Rows) //leer mientras haya filas en el DataSet
+                    {
+                        Archivo.Write(Reg["Nombre"]);
+                        Archivo.Write(";");
+                        Archivo.Write(Reg["Deuda"]);
+                        Archivo.Write(";");
+                        Archivo.WriteLine(Reg["Limite"]);//Dato + salto de linea
+
+                    }
+                }
+                Archivo.Close();    
+                conexion.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+            }   
         }
     }
 }
