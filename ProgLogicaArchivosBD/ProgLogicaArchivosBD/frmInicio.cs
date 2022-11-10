@@ -44,5 +44,15 @@ namespace ProgLogicaArchivosBD
             frmListadoClientes objVentana = new frmListadoClientes();
                 objVentana.ShowDialog();
         }
+
+        private void datosDeDesarrolladorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }

@@ -56,9 +56,10 @@ namespace ProgLogicaArchivosBD
             this.baseDatosADOToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(465, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(680, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // sistemaToolStripMenuItem
             // 
@@ -75,6 +76,7 @@ namespace ProgLogicaArchivosBD
             this.datosDeDesarrolladorToolStripMenuItem.Name = "datosDeDesarrolladorToolStripMenuItem";
             this.datosDeDesarrolladorToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
             this.datosDeDesarrolladorToolStripMenuItem.Text = "Datos de desarrollador...";
+            this.datosDeDesarrolladorToolStripMenuItem.Click += new System.EventHandler(this.datosDeDesarrolladorToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
@@ -173,7 +175,7 @@ namespace ProgLogicaArchivosBD
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.ClientSize = new System.Drawing.Size(465, 297);
+            this.ClientSize = new System.Drawing.Size(680, 385);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmInicio";
